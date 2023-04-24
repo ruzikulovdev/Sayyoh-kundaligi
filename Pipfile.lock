@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0ba99cc3533d1c33294732e221a2f048b3f9362061f2c1535786c1d38b68247c"
+            "sha256": "64c2127b822e01b0eae2010b48f4e25e49d0e0f5601e04c0d0258223499f7424"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -52,6 +52,14 @@
             ],
             "index": "pypi",
             "version": "==4.0"
+        },
+        "django-modeltranslation": {
+            "hashes": [
+                "sha256:d92bcd004e48946ae3824289ee76d36faa670f6e3da4a0412cdaeb4fc2526627",
+                "sha256:f79ec5548053ffa2153b7b5ca646f59da1bf9e4c2c62085e21ead662a9c2faf8"
+            ],
+            "index": "pypi",
+            "version": "==0.18.9"
         },
         "pillow": {
             "hashes": [
@@ -125,12 +133,35 @@
             "index": "pypi",
             "version": "==9.5.0"
         },
+        "python-decouple": {
+            "hashes": [
+                "sha256:ba6e2657d4f376ecc46f77a3a615e058d93ba5e465c01bbe57289bfb7cce680f",
+                "sha256:d0d45340815b25f4de59c974b855bb38d03151d81b037d9e3f463b0c9f8cbd66"
+            ],
+            "index": "pypi",
+            "version": "==3.8"
+        },
         "sqlparse": {
             "hashes": [
-                "sha256:0323c0ec29cd52bceabc1b4d9d579e311f3e4961b98d174201d5622a23b85e34",
-                "sha256:69ca804846bb114d2ec380e4360a8a340db83f0ccf3afceeb1404df028f57268"
+                "sha256:5430a4fe2ac7d0f93e66f1efc6e1338a41884b7ddf2a350cedd20ccc4d9d28f3",
+                "sha256:d446183e84b8349fa3061f0fe7f06ca94ba65b426946ffebe6e3e8295332420c"
             ],
-            "version": "==0.4.3"
+            "version": "==0.4.4"
+        },
+        "typing-extensions": {
+            "hashes": [
+                "sha256:5cb5f4a79139d699607b3ef622a1dedafa84e115ab0024e0d9c044a9479ca7cb",
+                "sha256:fb33085c39dd998ac16d1431ebc293a8b3eedd00fd4a32de0ff79002c19511b4"
+            ],
+            "version": "==4.5.0"
+        },
+        "whitenoise": {
+            "hashes": [
+                "sha256:599dc6ca57e48929dfeffb2e8e187879bfe2aed0d49ca419577005b7f2cc930b",
+                "sha256:a02d6660ad161ff17e3042653c8e3f5ecbb2a2481a006bde125b9efb9a30113a"
+            ],
+            "index": "pypi",
+            "version": "==6.4.0"
         }
     },
     "develop": {}

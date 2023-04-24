@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 django = "==4.0"
 pillow = "*"
+django-modeltranslation = "*"
+python-decouple = "*"
+whitenoise = "*"
 
 [dev-packages]
 

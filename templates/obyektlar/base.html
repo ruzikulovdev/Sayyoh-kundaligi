@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 
 <html>
@@ -33,6 +34,22 @@
               <li><a href="{% url 'home_page' %}">Bosh sahifa</a></li>
               <li><a href="#">Biz haqimizda</a></li>
               <li><a href="{% url 'contact_page' %}">Aloqa</a></li>
+
+            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select name="language">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="Go">
+            </form>
+
             </ul>
           </div>
           <div class="header_top_right">
@@ -85,14 +102,14 @@
           </ul>
           <div class="social_area">
             <ul class="social_nav">
-              <li class="facebook"><a href="#"></a></li>
-              <li class="twitter"><a href="#"></a></li>
-              <li class="flickr"><a href="#"></a></li>
-              <li class="pinterest"><a href="#"></a></li>
-              <li class="googleplus"><a href="#"></a></li>
-              <li class="vimeo"><a href="#"></a></li>
-              <li class="youtube"><a href="#"></a></li>
-              <li class="mail"><a href="#"></a></li>
+<!--              <li class="facebook"><a href="#"></a></li>-->
+<!--              <li class="twitter"><a href="#"></a></li>-->
+              <li class="flickr"><a href="https://telegram.me/sightseeruz"></a></li>
+<!--              <li class="pinterest"><a href="#"></a></li>-->
+<!--              <li class="googleplus"><a href="#"></a></li>-->
+<!--              <li class="vimeo"><a href="#"></a></li>-->
+<!--              <li class="youtube"><a href="#"></a></li>-->
+              <li class="mail"><a href="mailto:https://info@sightseer.uz"></a></li>
             </ul>
           </div>
         </div>
@@ -111,7 +128,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4">
           <div class="footer_widget wow fadeInLeftBig">
-            <h2>Flickr Images</h2>
+            <h2>Ijtimoiy Tarmoqlar</h2>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
@@ -128,9 +145,10 @@
         <div class="col-lg-4 col-md-4 col-sm-4">
           <div class="footer_widget wow fadeInRightBig">
             <h2>Biz bilan Aloqa</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Assalomu alaykum. Saytimizga xush kelibsiz. Agar saytda qandaydir xato topsangiz iltimos<a href="https://telegram.me/ruzikulovdev"> Adminga</a> yoki info@sightseer.uz elektron pochtasiga xabar yuboring! </p>
             <address>
-            Perfect News,1238 S . 123 St.Suite 25 Town City 3333,USA Phone: 123-326-789 Fax: 123-546-567
+            Manzil: Toshkent shahar, Yunusobod tumani
+              Obod ko'chasi
             </address>
           </div>
         </div>
