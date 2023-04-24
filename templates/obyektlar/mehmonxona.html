@@ -1,0 +1,20 @@
+{% extends 'obyektlar/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+{% for mehmonxona in mehmonxonalar %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <a href="{{ mehmonxona.get_absolute_url }}">
+            <img src="{{ mehmonxona.Rasm.url }}" alt="{{ mehmonxona.Mavzu}}" style="widt:50%">
+            <h2>{{ mehmonxona.Mavzu }}</h2>
+            </a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content %}

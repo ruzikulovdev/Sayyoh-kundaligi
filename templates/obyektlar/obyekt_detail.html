@@ -1,0 +1,21 @@
+{% extends 'obyektlar/base.html' %}
+{% load static %}
+{% block content %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<h1>{{ obyekt_detail.Mavzu }} </h1>
+<p>{{ obyekt_detail.category }}</p>
+<p>{{ obyekt_detail.Matn }}</p>
+<img src="{{ obyekt_detail.Rasm.url }}">
+<hr>
+<p>Yozilgan vaqti: {{ obyekt_detail.yozilgan_vaqti }}</p>
+
+<!--</body>-->
+<!--</html>-->
+
+{% endblock content %}

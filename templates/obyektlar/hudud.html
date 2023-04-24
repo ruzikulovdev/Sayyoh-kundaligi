@@ -1,0 +1,18 @@
+{% extends 'obyektlar/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+{% for hudud in hududlar %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <img src="{{ hudud.Rasm.url }}" alt="{{ hudud.Mavzu}}" style="widt:50%">
+            <h2>{{ hudud.Mavzu }}</h2>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content %}
