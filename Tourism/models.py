@@ -37,8 +37,8 @@ class Touristik_hudular(models.Model):
                               choices=Status.choices,
                               default=Status.Tekshirish
                               )
-
-    object =models.Manager()
+    korish_soni = models.IntegerField(default=0)
+    object = models.Manager()
     chiqarish = ChiqarishManager()
 
     class Meta:

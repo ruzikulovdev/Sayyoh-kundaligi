@@ -6,7 +6,7 @@ from .models import Touristik_hudular, Category, Contact, Viloyatlar
 
 @admin.register(Touristik_hudular)
 class AdminSahifa(admin.ModelAdmin):
-    list_display = ['Mavzu', 'slug', 'category', 'yozilgan_vaqti', 'yaratilgan_vaqti', 'yangilangan_vaqti', 'status']
+    list_display = ['Mavzu', 'slug', 'category', 'yozilgan_vaqti', 'yaratilgan_vaqti', 'yangilangan_vaqti', 'status', 'korish_soni']
     list_filter = ['category', 'yaratilgan_vaqti', 'status']
     prepopulated_fields = {"slug":('Mavzu',)}
     date_hierarchy = 'yozilgan_vaqti'

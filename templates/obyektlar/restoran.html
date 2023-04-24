@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'obyektlar/base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block content %}
+
+{% for restoran in restoranlar %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <a href="{{ restoran.get_absolute_url }}">
+            <img src="{{ restoran.Rasm.url }}" alt="{{ restoran.Mavzu}}" style="widt:50%">
+            <h2>{{ restoran.Mavzu }}</h2>
+            </a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content %}

@@ -16,10 +16,13 @@ def obyekt_list(request):
 
 
 
-def obyekt_detail(request, obyektlar ):
+def obyekt_detail(request, obyektlar):
     obyekt_detail =get_object_or_404(Touristik_hudular, slug=obyektlar, status=Touristik_hudular.Status.Chiqarish)
+    obyekt_detail.korish_soni = obyekt_detail.korish_soni + 1
+    obyekt_detail.save()
     context = {
-        "obyekt_detail": obyekt_detail
+        "obyekt_detail": obyekt_detail,
+        "obyekt_detail.korish_soni": obyekt_detail.korish_soni
     }
     return render(request, "obyektlar/obyekt_detail.html", context=context)
 
@@ -52,7 +55,7 @@ class MehmonxonaView(ListView):
 class RestoranView(ListView):
     model = Touristik_hudular
     template_name = 'obyektlar/restoran.html'
-    context_object_name = 'restoranlar '
+    context_object_name = 'restoranlar'
 
     def get_queryset(self):
         restoran = self.model.chiqarish.all().filter(category__Nomi='Restoran')
