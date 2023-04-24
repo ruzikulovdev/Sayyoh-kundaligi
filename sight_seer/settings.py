@@ -135,7 +135,7 @@ MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/sightsee/sightseer.uz/django/staticfiles'
-STATICFILES_DIRS = '/home/sightsee/sightseer.uz/django/static'
+STATICFILES_DIRS = ('/home/sightsee/sightseer.uz/django/static',)
 
 # locale
 # STATIC_ROOT = BASE_DIR / 'staticfiles'
